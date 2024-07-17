@@ -6,7 +6,7 @@ import java.nio.charset.StandardCharsets
 
 class KakaoUriBuilderServiceTest extends Specification {
 
-    private KakaoUriBuilderService kakaoUriBuilderService;
+    private KakaoUriBuilderService kakaoUriBuilderService
 
     def setup() {
         kakaoUriBuilderService = new KakaoUriBuilderService()
@@ -18,7 +18,7 @@ class KakaoUriBuilderServiceTest extends Specification {
         def charset = StandardCharsets.UTF_8
 
         when:
-        def uri = kakaoUriBuilderService.buildUriByAddressSearch(address);
+        def uri = kakaoUriBuilderService.buildUriByAddressSearch(address)
         def decodedResult = URLDecoder.decode(uri.toString(), charset)
 
         then:
